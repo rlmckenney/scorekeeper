@@ -18,7 +18,12 @@ const styles = {
     padding: '0.5rem 0',
     display: 'grid',
     gridTemplateColumns: '1fr auto 1fr',
-    gridGap: '0.5rem'
+    gridGap: '0.5rem',
+    boxShadow: '0 2px 6px 0 hsl(220, 15%, 70%)',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0
   },
   pageTitle: {
     fontSize: '1.1rem',
