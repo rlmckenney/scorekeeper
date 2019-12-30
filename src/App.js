@@ -27,16 +27,18 @@ function App () {
       <main>
         <h2>Round {round}</h2>
         <div className='card-grid'>
-          {[...players.values()].map(p => (
-            <PlayerCard
-              key={p.id}
-              player={p}
-              setBid={setPlayerBid}
-              setScore={setPlayerScore}
-              setName={setPlayerName}
-              removePlayer={removePlayer}
-            />
-          ))}
+          {[...players.values()]
+            .sort((p1, p2) => p2.prevScore - p1.prevScore)
+            .map(p => (
+              <PlayerCard
+                key={p.id}
+                player={p}
+                setBid={setPlayerBid}
+                setScore={setPlayerScore}
+                setName={setPlayerName}
+                removePlayer={removePlayer}
+              />
+            ))}
         </div>
         <button className='button isPrimary' onClick={incrementRound}>
           Next Round
