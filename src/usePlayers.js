@@ -26,6 +26,8 @@ const defaultState = new Map([
 export default function usePlayers (initialState = defaultState) {
   const [players, setPlayers] = useState(initialState)
 
+  const getNextId = () => Math.max(...[...players.keys()]) + 1
+
   const setPlayerBid = (playerId, amount) => {
     const newState = new Map([...players])
     const newPlayer = newState.get(playerId)
@@ -48,9 +50,9 @@ export default function usePlayers (initialState = defaultState) {
     })
     setPlayers(newPlayers)
   }
-  const addPlayer = name => {
+  const addPlayer = (name = 'Player ' + getNextId()) => {
     const player = {
-      id: Math.max(...[...players.keys()]) + 1,
+      id: getNextId(),
       name: name,
       bid: 0,
       score: 0,

@@ -5,7 +5,13 @@ import usePlayers from './usePlayers'
 import './App.css'
 
 function App () {
-  const { players, setPlayerBid, setPlayerScore, startNextRound } = usePlayers()
+  const {
+    players,
+    setPlayerBid,
+    setPlayerScore,
+    startNextRound,
+    addPlayer
+  } = usePlayers()
   const [round, setRound] = useState(1)
 
   const incrementRound = () => {
@@ -15,7 +21,7 @@ function App () {
 
   return (
     <div className='App'>
-      <TheHeader />
+      <TheHeader addPlayer={addPlayer} />
       <main>
         <h2>Round {round}</h2>
         <div className='card-grid'>
