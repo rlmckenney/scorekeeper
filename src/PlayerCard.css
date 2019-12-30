@@ -1,0 +1,5 @@
+.PlayerCard {
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 12px 0 hsl(220, 15%, 88%);
+  padding: 1rem;
+}
