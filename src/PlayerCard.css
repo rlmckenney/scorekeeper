@@ -3,6 +3,7 @@
   box-shadow: 0 3px 12px 0 hsl(220, 15%, 88%);
   padding: 1rem;
   background-color: hsl(220, 15%, 99%);
+  position: relative;
 }
 .PlayerCard > div {
   padding: 0.5rem 0;
@@ -25,4 +26,20 @@ button {
   border-radius: 0.25rem;
   border: 1px solid #eee;
   background-color: transparent;
+}
+
+.deleteButton {
+  border: none;
+  color: hsl(220, 15%, 70%);
+  font-size: 1.125rem;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+}
+
+.green {
+  color: green;
+}
+.red {
+  color: crimson;
 }

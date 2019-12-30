@@ -69,6 +69,11 @@ export default function usePlayers (initialState = defaultState) {
     newPlayers.set(id, player)
     setPlayers(newPlayers)
   }
+  const removePlayer = id => {
+    const newPlayers = new Map([...players])
+    newPlayers.delete(id)
+    setPlayers(newPlayers)
+  }
 
   return {
     players,
@@ -76,6 +81,7 @@ export default function usePlayers (initialState = defaultState) {
     setPlayerScore,
     startNextRound,
     addPlayer,
+    removePlayer,
     setPlayerName
   }
 }

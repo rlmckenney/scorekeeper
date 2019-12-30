@@ -11,6 +11,7 @@ function App () {
     setPlayerScore,
     startNextRound,
     addPlayer,
+    removePlayer,
     setPlayerName
   } = usePlayers()
   const [round, setRound] = useState(1)
@@ -33,6 +34,7 @@ function App () {
               setBid={setPlayerBid}
               setScore={setPlayerScore}
               setName={setPlayerName}
+              removePlayer={removePlayer}
             />
           ))}
         </div>
